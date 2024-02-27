@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\SPURGE\git\EcommerceAPITestingFramework"/>
+			<item value="C:\Users\SPURGE\git\Exercise1"/>
+			<item value="C:\Users\SPURGE\Downloads\Exercise1-master (2)"/>
+			<item value="C:\Users\SPURGE\Downloads\Exercise1-master_all\Exercise1-master\src"/>
+			<item value="C:\Users\SPURGE\Downloads\Exercise1-master_all"/>
+			<item value="C:\gitProjects\SeleniumAutomationProject"/>
+			<item value="C:\Users\SPURGE\git\Team_Green"/>
+			<item value="C:\gitProjects\Team_Green\SeleniumAutomationProject"/>
+			<item value="C:\Users\SPURGE\Documents\Team_Green-master\Team_Green-master\SeleniumAutomationProject"/>
+			<item value="C:\Users\SPURGE\Downloads\E2E"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\XPath"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\OrangeHRM"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\OOPS"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Maven_Project"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Maven"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Practice"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Guru_Bank"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\GenerateLogs"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\FlashTesting"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\DataDriven"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Cucumber_JavaProject"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Cucumber"/>
+			<item value="C:\Users\SPURGE\eclipse-workspace\ApachePOI"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\SPURGE\Downloads\Exercise1-master_all\Exercise1-master"/>
+			<item value="C:\gitProjects\SeleniumAutomationProject"/>
+			<item value="C:\gitProjects\Team_Green\SeleniumAutomationProject"/>
+			<item value="C:\Users\SPURGE\git\Team_Green\Team_Green\SeleniumAutomationProject"/>
+			<item value="C:\Users\SPURGE\Downloads\TestNgFramework"/>
+			<item value="C:\Users\SPURGE\Downloads\TrusTrace"/>
+			<item value="C:\Users\SPURGE\eclipse-workspace\Cucumber_all"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\PARABank"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Java8"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\inetBankingV1"/>
+			<item value="C:\Users\SPURGE\Downloads\ZIPPPPP  FOLDER\B"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\DEMO_WEBSITE"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\banking_project"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Collections"/>
+			<item value="C:\Users\SPURGE\Desktop\projects\Appium_Mobile_Test_Project"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="534"/>
+		<item key="DIALOG_Y_ORIGIN" value="209"/>
+	</section>
+</section>

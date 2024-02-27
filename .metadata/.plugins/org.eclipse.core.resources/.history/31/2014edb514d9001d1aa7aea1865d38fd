@@ -1,0 +1,23 @@
+package interview_Ques_shared;
+
+public class FindSpecifiedString {
+
+	public static void main(String[] args) {
+		
+		String[] temp = {"aa","cc","11","bb","dd","aa","zz"};
+		
+		String expString="zz";
+		
+		for(int i=0;i<temp.length;i++)
+		{				
+				if(temp[i].equalsIgnoreCase(expString))
+				{
+					System.out.println(expString+" is in given String");
+				}
+				
+			
+		}
+
+	}
+
+}

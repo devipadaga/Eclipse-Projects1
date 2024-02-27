@@ -1,0 +1,136 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ReadJsonData {
+
+	static WebDriver driver;
+
+
+	@BeforeTest
+	public static void setup()
+	{
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		driver=new ChromeDriver(options);
+
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));	
+		//	driver.get("https://testpages.herokuapp.com/styled/tag/dynamic-table.html");
+		//  driver.get("https://www.spicejet.com/");
+		driver.get("https://www.patientzone.co.uk/app/reg-end-user");
+	}
+
+
+
+
+	//@Test
+	public static void passJsonData() throws FileNotFoundException, IOException, ParseException, InterruptedException
+	{
+		driver.findElement(By.xpath("//*[text()='Table Data']")).click();
+		WebElement jsondata=driver.findElement(By.xpath("//*[@id='jsondata']"));
+		System.out.println(jsondata.getText());
+		Assert.assertEquals("Bob", "Bob");
+
+		JSONParser parser = new JSONParser();
+
+		Object obj = parser.parse(new FileReader("C:\\Users\\SPURGE\\Desktop\\JsonFileStudentdata.json"));
+
+		String data=obj.toString();
+
+
+		jsondata.sendKeys(data);
+
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@id='refreshtable']")).click();
+	}
+
+	//@Test
+	public static void Spicejet() throws InterruptedException
+	{
+		driver.findElement(By.xpath("(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep']/input)[1]")).sendKeys("HYD");
+//		driver.findElement(By.xpath("(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep']/input)[2]")).sendKeys("BLR");
+		WebElement To=driver.findElement(By.xpath("(//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep']/input)[2]"));
+		To.clear();
+		To.sendKeys("Ben");
+
+		List<WebElement> cities=driver.findElements(By.xpath("//div[@class='css-1dbjc4n r-b5h31w r-95jzfe']"));
+
+		for (int i = 0; i < cities.size(); i++) {
+			if(cities.get(i).equals("BLR"))
+			{
+				cities.get(i).click();
+			}
+		}
+
+		//driver.findElement(By.xpath("//div[@data-testid='departure-date-dropdown-label-test-id']")).click();
+		Thread.sleep(3000);
+		
+		
+
+		String ExMonth="April";
+		String ExYear="2024";
+		String exp_Date="15";
+
+		
+		String MONTHYEAR=driver.findElement(By.xpath("(//div[@class='css-1dbjc4n r-k8qxaj'])[1]")).getText();
+		System.out.println(MONTHYEAR);
+		
+		driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-18u37iz']//div[@data-testid='undefined-month-'"+ExMonth+"'-'"+ExYear+"'']//div[@data-testid='undefined-calendar-day-'"+exp_Date+"']"))
+		.click();	
+	}
+
+
+	@Test
+	public static void patientRegForm() throws InterruptedException
+	{
+		List<String> data=new ArrayList<String>(Arrays.asList("Tirumala","Devi","Kadiyam","19/12/1996","123@gmail.com","a1","a2","a3","a4","500089","9876543210"));
+		Map<String,String> map=new HashMap<String,String>();
+		
+		for (int i = 0; i < data.size(); i++) {
+			
+		WebElement inputfield=driver.findElement(By.xpath("//input[@id='mat-input-"+i+"']"));
+		inputfield.sendKeys(data.get(i));
+		Thread.sleep(3000);
+		String inputvalue=inputfield.getAttribute("value");
+		String tagname=inputfield.getAttribute("data-placeholder");
+		System.out.println(tagname+","+inputvalue);
+		
+		map.put(tagname, inputvalue);
+		System.out.println(map);
+		}
+	}
+	
+
+	@AfterClass
+	public static void teardown()
+	{
+		driver.quit();
+	}
+
+}

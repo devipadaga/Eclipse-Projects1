@@ -1,0 +1,17 @@
+package dailyTasks;
+
+import java.util.*;
+
+public class copyNumber {
+
+	public static void main(String[] args) {
+		
+		long num=123456789012345l;
+		
+		List<Object> dupNum=new ArrayList<>();
+		dupNum.add(dupNum);
+		System.out.println(dupNum);
+
+	}
+
+}

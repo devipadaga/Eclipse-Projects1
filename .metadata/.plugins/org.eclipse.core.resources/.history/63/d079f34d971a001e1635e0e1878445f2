@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="Google Test" verbose="4" thread-count="2" parallel="tests">
+  <test  name="Testrail">
+	  <parameter name="url" value="https://www.google.com/"></parameter>
+    <classes>
+      <class name="Tests.GoogleTest"/>
+     
+    </classes>
+  </test> <!-- Testrail -->
+  
+  
+  
+  
+  <test  name="FACEBOOK Test">
+	  <parameter name="url" value="https://www.facebook.com/"></parameter>
+    <classes>
+     
+      <class name="Tests.FacebookTest"/>
+    </classes>
+  </test> <!-- Testrail -->
+</suite> <!-- Suite -->

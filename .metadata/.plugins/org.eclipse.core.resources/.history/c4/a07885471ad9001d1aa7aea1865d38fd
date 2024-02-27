@@ -1,0 +1,110 @@
+package interview_Ques_shared;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Strings {
+	
+	static void string1()
+	{
+		String s="temp123";
+		
+		//print only ---temp word
+		s=s.replaceAll("[^a-zA-Z]+", "");
+		System.out.println(s);
+		
+		System.out.println("Another way--using StringBuffer:");
+		StringBuffer sb=new StringBuffer();
+		
+		
+		for(int i=0;i<s.length();i++)
+		{
+		if(Character.isLetter(s.charAt(i)))
+		{
+			sb.append(s.charAt(i));
+		}
+		}
+		System.out.println(sb.toString());
+	}
+	
+	
+	//print susbstring from String
+	static void string2()
+	{
+		String s="ArunKumar";
+		String s3=s.substring(0, 4);
+		String s1=s.substring(s.indexOf("Kumar"));
+		String s2=s.substring(s.indexOf('K'));
+		//System.out.println(s2);
+		System.out.println("s3 ="+s3+"\n"+"s1 ="+s1+"\n"+"s2 ="+s2);
+		
+	}
+	
+	static void removwWhiteSpaces()
+	{
+		String s=" we l com e";
+		System.out.println(s.replaceAll(" ", ""));
+	}
+	
+	static void find_Specified_String()
+	{
+		String[] temp = {"aa","cc","11","bb","dd","aa","zz"};
+
+		String expString="zz";
+
+		for(int i=0;i<temp.length;i++)
+		{				
+			if(temp[i].equalsIgnoreCase(expString))
+			{
+				System.out.println(expString+" is in given String");
+			}			
+		}
+	}
+	
+	static void duplicate_String()
+	{
+		String[] temp = {"aa","cc","11","bb","dd","aa","zz"};
+
+		for(int i=0;i<temp.length;i++)
+		{
+			for (int j = i+1; j < temp.length; j++) {			
+			if(temp[i]==temp[j])
+			{
+				System.out.println(temp[j]);
+			}	
+			}
+		}
+	}
+	
+	static void duplicate_String2()
+	{
+String[] strArrays = {"Cabbage","Cabbage","Kale","Radish","Kale","Garlic","Ginger","Garlic","Carrot","Kale"};
+      
+		
+        List<String> list = Arrays.asList(strArrays);      
+        Set<String> set = new HashSet<String>(list);
+ 
+        for (String s : set) 
+        {
+        	boolean flagForDuplicate = set.add(s);
+        	 
+            if(!flagForDuplicate) {
+                System.out.println(strArrays + " is duplicate element");
+        }
+	}
+
+	}
+
+	public static void main(String[] args) {
+		
+		//string1();
+		//string2();
+		//removwWhiteSpaces();
+		//find_Specified_String();
+		duplicate_String();
+	}
+
+}

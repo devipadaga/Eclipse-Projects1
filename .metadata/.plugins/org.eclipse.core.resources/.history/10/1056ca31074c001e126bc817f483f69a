@@ -1,0 +1,32 @@
+package exercise1GivenByGurusir;
+
+import java.util.Arrays;
+
+public class QuestionNo8 {
+
+	public static void main(String[] args) {
+		int[] arr= {4,0,2,6,0,0,7,0,9,0,12}; //4,2
+		int n=arr.length;
+		
+		System.out.println(Arrays.toString(arr));
+		
+		int count=0; //1,2
+		for(int i=0;i<n;i++) //1,2,3
+		{
+			if(arr[i]!=0)
+			{
+				arr[count++]=arr[i];
+			}
+		}
+		
+		System.out.println(count);
+		while(count<n)
+		{
+			arr[count++]=0;
+		}
+		
+		System.out.println(Arrays.toString(arr));
+
+	}
+
+}

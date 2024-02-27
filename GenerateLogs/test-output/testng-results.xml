@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-25T12:00:09 IST" name="Default suite" finished-at="2022-04-25T12:00:17 IST" duration-ms="8162">
+    <groups>
+      <group name="link">
+        <method signature="LoginTest.GoogleLinkTest()[pri:2, instance:LoginTest@302552ec]" name="GoogleLinkTest" class="LoginTest"/>
+      </group> <!-- link -->
+      <group name="logo">
+        <method signature="LoginTest.GoogleLogoTest()[pri:1, instance:LoginTest@302552ec]" name="GoogleLogoTest" class="LoginTest"/>
+      </group> <!-- logo -->
+    </groups>
+    <test started-at="2022-04-25T12:00:09 IST" name="Default test" finished-at="2022-04-25T12:00:17 IST" duration-ms="8162">
+      <class name="LoginTest">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:LoginTest@302552ec]" started-at="2022-04-25T12:00:09 IST" name="SetUp" finished-at="2022-04-25T12:00:15 IST" duration-ms="5298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="GoogleLogoTest()[pri:1, instance:LoginTest@302552ec]" started-at="2022-04-25T12:00:15 IST" name="GoogleLogoTest" finished-at="2022-04-25T12:00:15 IST" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleLogoTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:LoginTest@302552ec]" started-at="2022-04-25T12:00:15 IST" name="TearDown" finished-at="2022-04-25T12:00:15 IST" duration-ms="341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:LoginTest@302552ec]" started-at="2022-04-25T12:00:15 IST" name="SetUp" finished-at="2022-04-25T12:00:17 IST" duration-ms="2164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="GoogleLinkTest()[pri:2, instance:LoginTest@302552ec]" started-at="2022-04-25T12:00:17 IST" name="GoogleLinkTest" finished-at="2022-04-25T12:00:17 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleLinkTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:LoginTest@302552ec]" started-at="2022-04-25T12:00:17 IST" name="TearDown" finished-at="2022-04-25T12:00:17 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

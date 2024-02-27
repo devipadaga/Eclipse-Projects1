@@ -1,0 +1,53 @@
+package exercise_2GivenByGurusir;
+
+public class QustionNo24 {
+
+	public static void main(String[] args) {
+//		24.	Find the duplicates from a given sentence without using List,
+//		Map and set and don't use any inbuilt methods.
+
+		String sentence="Book key table key smart book key on the table science book";
+		
+		
+	}
+
+	public static void duplicateswordswithoutusingcollections(String str) {
+		
+//		for(int i=0;i<str.length();i++) {
+//			
+//			String temp="";
+//			for(int j=0;j<str.length();j++) {
+//				
+//				if(str.charAt(i)!=' ') {
+//					temp=temp+str.charAt(i);
+//				}else {
+//					break;
+//				}
+//			}
+//			
+//			
+//		}
+		
+		
+		String[] words = str.split(" ");
+	      int length = words.length;
+	      // Using for loop 
+	      for( int i=0; i < length; i++)
+	      {
+	          // Set count to 1 for every iteration
+	          int count = 1;
+	          for(int j=i+1; j < length; j++)
+	          {
+	              if(words[i].equals(words[j]))
+	              {
+	                  count++;
+	                  /* Setting words[j]="0" to avoid 
+	                  visited words */
+	                  words[j] = "0";
+	              }
+	          }
+	          if (words[i] != "0" && count > 1)
+	              System.out.print(" "+words[i]+" ");
+	}
+	}
+}

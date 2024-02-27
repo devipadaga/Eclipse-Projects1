@@ -1,0 +1,40 @@
+package bookingAPI;
+
+import java.util.Map;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured.*;
+import io.restassured.common.mapper.TypeRef;
+import io.restassured.http.ContentType;
+
+import static io.restassured.RestAssured.*;
+public class JSONtoMAP {
+	
+	Map<String,Object> responseBody=null;
+	
+	@Test
+	public void m1()
+	{
+		responseBody=given().baseUri("https://restful-booker.herokuapp.com/").basePath("booking")
+				.contentType(ContentType.JSON)
+				.body("{\r\n"
+						+ "    \"firstname\" : \"prem\",\r\n"
+						+ "    \"lastname\" : \"prem\",\r\n"
+						+ "    \"totalprice\" : 111,\r\n"
+						+ "    \"depositpaid\" : true,\r\n"
+						+ "    \"bookingdates\" : {\r\n"
+						+ "        \"checkin\" : \"2018-01-01\",\r\n"
+						+ "        \"checkout\" : \"2019-01-01\"\r\n"
+						+ "    },\r\n"
+						+ "    \"additionalneeds\" : \"Breakfast\"\r\n"
+						+ "}")
+				.when().post().then().extract()
+				.body().as(new TypeRef<Map<String,Object>>(){});
+		
+		System.out.println("Booking id is :"+responseBody.get("bookingid"));
+		System.out.println(responseBody);
+		System.out.println("Booking data is :"+responseBody.get("booking"));
+	}
+
+}

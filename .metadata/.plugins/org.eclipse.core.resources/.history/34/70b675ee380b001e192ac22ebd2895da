@@ -1,0 +1,91 @@
+package sel_Practice;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ExceptionHandling {
+	
+	
+	@Test
+	public void checkedExceptions() throws IOException, InterruptedException
+	//u need to handle it before you run the program.it is mandaatory otherwise it wont run.
+	
+	{
+	WebDriverManager.chromedriver().setup();
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--remote-allow-origins=*");
+	WebDriver driver=new ChromeDriver(options);
+	driver.get("https://www.google.com");
+	
+	
+	//1.MalformedURLException
+	
+	URL url=new URL("https://www.google.com");
+	driver.navigate().to(url);
+	
+
+	//2. FileNotFoundException
+
+	FileInputStream fs=new FileInputStream("C:\\Users\\SPURGE\\Desktop\\exceptionHandling.txt");	
+	Properties prop=new Properties();
+	prop.load(fs);
+	
+
+	//3. InterruptedException
+	
+	Thread.sleep(3000);
+	
+	}
+	
+	@Test
+	public void seleniumExceptions()
+	{
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver=new ChromeDriver(options);
+		driver.get("https://www.google.com");
+		
+		
+		
+		//1. TimeOutException
+		
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("aab")));
+		
+		//2. SessionNOtCreatedException
+			// it occurs when driver version is incompatible with actual browser version
+			//WebDriverManager.chromedriver().driverVersion("104.0.5112.20").setup();
+		
+		
+		//3. NoSuchSessionException
+		//This occurs when we try to run any command after driver.quit() or driver.close();
+		//driver.close();
+		
+		
+		//4.ElementNotInteractable		
+		//when element is present in the DOM but it is not interactable
+		
+		driver.findElement(By.id("mno")).sendKeys("4567890");
+		
+		//5.ElementNotSelecatble
+		//when element is present in the DOM but it is not selectable
+		
+		//6.ElementNotVisible
+		//when element is present in the DOM but it is not visible on UI
+		
+	}
+}

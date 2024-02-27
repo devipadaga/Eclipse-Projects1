@@ -1,0 +1,59 @@
+package karTasks;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class shadowDOM {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver driver=new ChromeDriver(options);
+		driver.get("https://books-pwakit.appspot.com/explore?q=");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		String cssSelHost1="book-app[apptitle='BOOKS']";
+		String csssSelHost2="app-header[effects='waterfall']";
+		String csssSelHost3="app-toolbar[class='toolbar-bottom']";
+		String csssSelHost4="book-input-decorator";
+		
+		WebElement ShadowRootHost0=driver.findElement(By.cssSelector(cssSelHost1));		
+		SearchContext  last0=(SearchContext )((JavascriptExecutor)driver).executeScript("return arguments[0].shadowRoot", ShadowRootHost0);		
+		Thread.sleep(1000);
+		
+		WebElement ShadowRootHost1=last0.findElement(By.cssSelector("app-header[effects='waterfall']"));		
+		SearchContext  last1=(SearchContext )((JavascriptExecutor)driver).executeScript("return arguments[0].shadowRoot", ShadowRootHost1);		
+		Thread.sleep(1000);
+		
+		WebElement ShadowRootHost2=last1.findElement(By.cssSelector("app-toolbar[class='toolbar-bottom']"));		
+		SearchContext  last2=(SearchContext )((JavascriptExecutor)driver).executeScript("return arguments[0].shadowRoot", ShadowRootHost2);		
+		Thread.sleep(1000);
+		
+		WebElement ShadowRootHost3=last2.findElement(By.cssSelector("book-input-decorator"));		
+		SearchContext  last3=(SearchContext )((JavascriptExecutor)driver).executeScript("return arguments[0].shadowRoot", ShadowRootHost3);		
+		Thread.sleep(1000);
+		
+		last3.findElement(By.id("input")).sendKeys("AbdulKalam");
+		
+		
+//		//This Element is inside single shadow DOM.
+//		String cssSelectorForHost1 = "book-app[apptitle='BOOKS']";
+//		Thread.sleep(1000);
+//		SearchContext shadow = driver.findElement(By.cssSelector("book-app[apptitle='BOOKS']")).getShadowRoot();
+//		Thread.sleep(1000);
+//		shadow.findElement(By.cssSelector("book-input-decorator"));
+	}
+
+}

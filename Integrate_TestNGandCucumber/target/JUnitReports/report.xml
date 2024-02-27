@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="18.679" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Amazon search" name="Amazon search - Example #1.1" time="10.72">
+<system-out><![CDATA[
+Given user launches the browser.............................................passed
+And user navigates to amazon website........................................passed
+When user searches "iphone 14" and clicks SearchBar.........................passed
+Then user navigates to SearchResults........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon search" name="Amazon search - Example #1.2" time="7.737">
+<system-out><![CDATA[
+Given user launches the browser.............................................passed
+And user navigates to amazon website........................................passed
+When user searches "apple" and clicks SearchBar.............................passed
+Then user navigates to SearchResults........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

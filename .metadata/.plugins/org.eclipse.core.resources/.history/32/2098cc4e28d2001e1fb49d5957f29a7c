@@ -1,0 +1,15 @@
+package api.tests;
+
+import java.io.FileReader;
+
+import org.json.simple.parser.JSONParser;
+
+public class JsonFile {
+	
+	
+	JSONParser parser = new JSONParser();
+	Object obj = parser.parse(new FileReader("C:\\Users\\SPURGE\\Desktop\\JsonFileStudentdata.json"));
+	String data=obj.toString();
+
+
+}

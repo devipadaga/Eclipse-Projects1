@@ -1,0 +1,38 @@
+package sel_Practice;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Basics extends BaseClass{
+	
+	
+	
+	@Test
+	public static void WindowHandling()
+	{
+		String win1=driver.getWindowHandle();
+		
+		Set<String> allwin=driver.getWindowHandles();
+		System.out.println(allwin.size());
+		
+		Iterator<String> it=allwin.iterator();
+		
+		 while (it.hasNext()) 
+		{
+		String win2=it.next();
+		driver.switchTo().window(win1);
+		System.out.println("switching window is successful");
+		}
+	}
+
+	
+	
+}

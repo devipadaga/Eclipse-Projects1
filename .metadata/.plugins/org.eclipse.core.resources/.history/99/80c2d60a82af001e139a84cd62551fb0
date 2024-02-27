@@ -1,0 +1,18 @@
+package VelocityPractice;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Secondoccurance {
+
+	public static void main(String[] args) {
+		
+		String s="Tirumala Devi";
+		
+		
+		Map<Character,Integer> m=new HashMap<Character,Integer>();
+		
+		
+				
+	}
+}

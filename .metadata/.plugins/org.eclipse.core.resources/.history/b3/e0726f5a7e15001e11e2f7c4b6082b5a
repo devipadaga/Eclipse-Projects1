@@ -1,0 +1,78 @@
+package JavaScriptExecutor;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.Color;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class javaScript {
+	
+	static WebDriver driver;
+	static JavascriptExecutor js=(JavascriptExecutor)driver;
+	
+	public static void changeCoLor(WebElement element,WebDriver driver,String color)
+	{
+		
+		js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element);
+		//arguments[0].style.backgroundColor
+	}
+	
+	public static void main(String[] args) throws InterruptedException, IOException
+	{
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriverManager.chromedriver().setup();
+	   driver=new ChromeDriver(options);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		//driver.get("https://www.abhibus.com/");
+		
+//		WebElement bus=driver.findElement(By.xpath("//a[@id='pills-home-tab']"));
+//		
+//		
+//		String bgColor=bus.getCssValue("background-color");
+//		String color=bus.getCssValue("color");
+//		
+//		System.out.println(bgColor+" , "+color);
+//		
+//		String hex=Color.fromString(bgColor).asHex();
+//		System.out.println(hex+" : hexadecimal format");
+//		
+////		
+////		for(int i=0;i<100;i++)
+////		{
+////			changeCoLor(bus, driver, bgColor);
+////			Thread.sleep(2000);
+////			changeCoLor(bus, driver, "#FFFF00");			
+////		}
+////		
+//		//border
+//		 JavascriptExecutor js1=(JavascriptExecutor)driver;
+//		 js1.executeScript("arguments[0].style.border= '3px solid yellow'", bus);
+////		
+//		String title=js1.executeScript("return document.title;").toString();
+//		System.out.println("Title is : "+title);
+//		
+//		File  src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//		File  dst=new File("C:\\Users\\Spurge\\Pictures\\Screenshots\\js1.png");
+//		FileUtils.copyFile(src, dst);
+		
+		//sendkeys
+		
+		driver.get("https://www.facebook.com/");
+		js1.executeScript("document.getElementById('email').value='Devi';");
+		//driver.close();
+	}
+
+}

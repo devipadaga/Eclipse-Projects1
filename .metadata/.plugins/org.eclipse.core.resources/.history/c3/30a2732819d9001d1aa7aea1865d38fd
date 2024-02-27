@@ -1,0 +1,59 @@
+package interview_Ques_shared;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class duplicateElement_and_its_frequency {
+
+	static void usingHashMap()
+	{
+		int[] arr= {4,4,5,5,7,8,9,10};
+		
+		HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
+		
+		for(int ele:arr)
+		{
+			if(hm.containsKey(ele))
+			{
+				hm.put(ele,hm.get(ele)+1);
+			}
+			else
+			{
+				hm.put(ele, 1);
+			}
+		}
+		
+		for(Map.Entry<Integer, Integer>entry:hm.entrySet())
+		{
+			if(entry.getValue()>1)
+			{
+				System.out.println(entry.getKey()+" : "+entry.getValue());
+			}
+		}
+	}
+	
+	static void using_inbuiltMethod()
+	{
+		String[] strArrays = {"Cabbage","Cabbage", "Kale","Radish","Kale","Garlic","Ginger","Garlic","Carrot","Kale"};
+      
+		
+        List<String> list = Arrays.asList(strArrays);      
+        Set<String> setVeg = new HashSet<String>(list);
+ 
+        for (String veg : setVeg) 
+        {
+            System.out.println(veg + "\t\t" + Collections.frequency(list, setVeg));
+        }
+	}
+	public static void main(String[] args) 
+	{
+		
+		//usingHashMap();
+		using_inbuiltMethod();
+	}
+
+}

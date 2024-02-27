@@ -1,0 +1,28 @@
+package sel_Practice;
+
+
+class abc
+{
+	int a=0;
+	
+
+public abc()
+{
+	a++;
+	System.out.println(a);
+	}
+}
+public class ejhwjehgec {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		abc a=new abc();
+
+		abc a1=new abc();
+
+		abc a2=new abc();
+
+	}
+
+}

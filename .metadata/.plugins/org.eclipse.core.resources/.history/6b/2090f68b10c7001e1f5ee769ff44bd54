@@ -1,0 +1,113 @@
+package dailyTasks;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Date_8_02_2024 {
+
+	public static void main(String[] args) {
+
+		String s="Java is java again java again";
+	//		countElementOccuranceWithoutLoops(s);
+
+		int n=342;
+	//		System.out.println(countDigits(n));
+
+		String str="I Am Not String";
+		System.out.println(revStringByPreservingSpaces(str));
+	}
+
+	public static void countElementOccuranceWithoutLoops(String s)
+	{
+		char c = 'g';
+		System.out.println(Collections.frequency(Arrays.asList(s.split("")),String.valueOf(c)));
+	}
+
+	public static int countDigits(int n)
+	{
+		String num=String.valueOf(n);
+		return num.length();
+	}
+
+	public static String revStringByPreservingSpaces(String s)
+	{
+		//String s="I Am Not String"
+		//output:g ni rtS toNmAI
+	
+		//String[] sarr=s.split(" ");
+		StringBuilder sb=new StringBuilder(s);
+		System.out.println("reversed :"+sb.reverse());
+
+		String s1=sb.toString().replace(" ", "");
+		System.out.println("after removing spaces : "+s1);
+
+		StringBuilder sb1=new StringBuilder(s1);
+		for(int i=0 ; i<s.length(); i++){
+			if(s.charAt(i)==' '){
+				sb1.insert(i, " ");
+			} 
+		}
+		return sb1.toString();
+
+
+
+
+
+		
+
+
+
+
+
+
+
+		/*
+		//Converting inputString to char array 'inputStringArray'
+
+        char[] inputStringArray = s.toCharArray();
+
+        //Defining a new char array 'resultArray' with same size as inputStringArray
+
+        char[] resultArray = new char[inputStringArray.length];
+
+        //First for loop : 
+        //For every space in the 'inputStringArray', 
+        //we insert spaces in the 'resultArray' at the corresponding positions 
+
+        for (int i = 0; i < inputStringArray.length; i++) 
+        {
+            if (inputStringArray[i] == ' ') 
+            {
+                resultArray[i] = ' ';
+            }
+        }
+
+        //Initializing 'j' with length of resultArray
+
+        int j = resultArray.length-1;
+
+        //Second for loop :
+        //we copy every non-space character of inputStringArray 
+        //from first to last at 'j' position of resultArray
+
+        for (int i = 0; i < inputStringArray.length; i++)
+        {
+            if (inputStringArray[i] != ' ') 
+            {
+                //If resultArray already has space at index j then decrementing 'j'                
+                if(resultArray[j] == ' ')
+                {
+                    j--;
+                }
+
+                resultArray[j] = inputStringArray[i];
+
+                j--;
+            }
+        }
+
+        System.out.println(s+" ---> "+String.valueOf(resultArray));
+    }
+		 */
+	}
+}

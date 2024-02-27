@@ -1,0 +1,38 @@
+package JavaScriptExecutor;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.Color;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class javaScript {
+	
+	public static void main(String[] args)
+	{
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver(options);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get("https://www.abhibus.com/");
+		
+		WebElement bus=driver.findElement(By.xpath("//a[@id='pills-home-tab']"));
+		
+		
+		String bgColor=bus.getCssValue("background-color");
+		String color=bus.getCssValue("color");
+		
+		System.out.println(bgColor+" , "+color);
+		
+		String hex=Color.fromString(bgColor).asHex();
+		System.out.println(hex+" : hexadecimal format");
+
+		
+	}
+
+}

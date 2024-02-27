@@ -1,0 +1,31 @@
+package sel_Practice;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ExceptionHandling {
+	
+	
+	@Test
+	public void checkedExceptions() throws MalformedURLException
+	{
+	WebDriverManager.chromedriver().setup();
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--remote-allow-origins=*");
+	WebDriver driver=new ChromeDriver(options);
+	driver.get("https://www.google.com");
+	
+	
+	//1.MalformedURLException
+	
+//	URL url=new URL("https://www.google.com");
+	}
+
+}

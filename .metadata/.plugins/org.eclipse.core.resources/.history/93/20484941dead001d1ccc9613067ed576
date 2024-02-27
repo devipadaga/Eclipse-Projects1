@@ -1,0 +1,40 @@
+package practice_demo;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class AddProduct {
+
+	public static void main(String[] args) {
+
+		WebDriverManager.chromedriver().setup();		
+		WebDriver driver=new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get("https://www.amazon.in/");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("5 feet pink TeddyBear");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		List<WebElement> product=driver.findElements(By.xpath("//div[@data-component-type='s-search-result']"));
+		System.out.println(product.size());
+		
+		String name="TOYKING 5 Feet Jumbo Cute Teddy Bear ( Pink)";
+		
+		for(int i=0;i<product.size();i++)
+		{
+			if(product.get(i).getText().equalsIgnoreCase("name"))
+			{
+				product.get(i).click();
+				break;
+			}
+		}
+		
+
+	}
+}

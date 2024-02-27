@@ -1,0 +1,33 @@
+package exercise1GivenByGurusir;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class QustionNo3 {
+
+	public static void main(String[] args) {
+
+		List<String> list=new ArrayList<>();
+		list.addAll(Arrays.asList("Jayesh","Tirumala","Vasanth","Kavitha","Vasanth","Tirumala"));
+		
+		uniqueUsingStreams(list);
+		uniqueUsingSet(list);
+	}
+
+	public static void uniqueUsingStreams(List<String> list)
+	{
+		List<String> uniqueNames = list.stream()
+				.distinct()
+				.collect(Collectors.toList());
+	}
+
+	public static void uniqueUsingSet(List<String> list)
+	{
+		Set<String> set=new HashSet<>(list);
+		System.out.println(set);
+	}
+}

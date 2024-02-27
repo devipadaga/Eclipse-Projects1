@@ -1,0 +1,10 @@
+package Assignments;
+
+public class First_repeated_and_last_unique {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package api.tests;
+
+import org.testng.Assert;
+
+import api.endpoints.UserEndPoints;
+import io.restassured.response.Response;
+
+public class DDTests {
+	
+	@Test(priority=1,dataProvider="Data")
+	public void testPostUser()
+	{
+		Response response=UserEndPoints.createUser(userpayload);
+		response.then().log().all();
+		
+		Assert.assertEquals(response.statusCode(),200);
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package org.sap.pages;
+
+import org.openqa.selenium.By;
+
+public class GTPLNewCustomerPage extends BasePage{
+	
+	
+	private final By NewCustomerBy = By.linkText("New Customer");
+	private final By CustomerNameBy = By.xpath("//input[@name='name']");
+	private final By RadioMaleBy = By.xpath("(//input[@name='rad1'])[1]");
+	private final By RadioFemaleBy = By.xpath("(//input[@name='rad1'])[2]");
+
+	private final By CalenderBy = By.xpath("//input[@name='dob']");
+	private final By RadioFemaleBy = By.xpath("(//input[@name='rad1'])[2]");
+
+	private final By RadioMaleBy = By.xpath("(//input[@name='rad1'])[1]");
+	private final By RadioFemaleBy = By.xpath("(//input[@name='rad1'])[2]");
+
+
+}

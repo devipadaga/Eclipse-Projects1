@@ -1,0 +1,7 @@
+# Serenity Report properties
+# These properties are used by the Gradle build
+serenity.project.name = Sample Serenity BDD project using JUnit 5
+serenity.test.root=starter
+webdriver.driver=Chrome
+
+

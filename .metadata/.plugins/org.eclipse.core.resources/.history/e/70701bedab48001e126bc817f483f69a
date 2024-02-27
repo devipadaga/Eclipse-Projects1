@@ -1,0 +1,22 @@
+package org.sap.pages;
+
+import org.openqa.selenium.By;
+import org.sap.enums.WaitStrategy;
+
+public class GTPLBankHomePage extends BasePage {
+
+	 private final By linkLogout=By.linkText("Log out");
+	 private final By NewCustomerLinkBy = By.linkText("New Customer");
+	 
+	 
+	 public void clickButton(By linkName) {
+		 click(linkName, WaitStrategy.PRESENCE, "Logoutlink");
+	 }
+	 
+		public String getTitle() {
+			return getPageTitle();
+
+		}
+		
+
+}

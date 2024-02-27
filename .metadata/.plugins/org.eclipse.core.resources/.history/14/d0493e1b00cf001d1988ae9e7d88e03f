@@ -1,0 +1,28 @@
+package karTasks;
+
+public class Common_Prefix_inStringArray {
+
+	public static void main(String[] args) {
+
+
+		String[] arr= {"geeksforgeeks", "geeks", "geek", "geezer"};
+		StringBuilder SB=new StringBuilder();
+		
+		int size=arr.length;
+		int length=arr[0].length();
+		
+		for(int i=0;i<length;i++)
+		{
+			if(arr[0].charAt(i)==arr[size-1].charAt(i))
+			{
+				SB.append(arr[0].charAt(i));
+			}
+			
+			else
+				break;
+		}
+		System.out.println(SB.toString());
+
+	}
+
+}

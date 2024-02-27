@@ -1,0 +1,27 @@
+package interview_Ques_shared;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class array_to_hashmap {
+
+	public static void main(String[] args) {
+
+		String[] newData = {"C1-Once","C2-Two","C3-Three","C4"};
+		
+		ArrayList<String> al=new ArrayList<>(Arrays.asList(newData));
+		HashMap<String,Integer> map=new HashMap<String,Integer>();
+		
+		for(String s:al)
+		{
+			map.put(s,s.length());
+		}
+		
+		System.out.println(map);
+		
+
+
+	}
+
+}

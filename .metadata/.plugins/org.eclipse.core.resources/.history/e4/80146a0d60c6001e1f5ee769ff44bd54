@@ -1,0 +1,27 @@
+package dailyTasks;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Date_8_02_2024 {
+
+	public static void main(String[] args) {
+		
+		String s="Java is java again java again";
+		countElementOccurance(s);
+	}
+	
+	public static void countElementOccurance(String s)
+	{
+		
+        char c = 'g';
+ 
+        // Count returns number of occurrences of
+        // c between two given positions provided
+        // as two iterators.
+        System.out.println(Collections.frequency(
+            Arrays.asList(s.split("")),
+            String.valueOf(c)));
+	}
+
+}

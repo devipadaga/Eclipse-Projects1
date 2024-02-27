@@ -1,0 +1,49 @@
+package sel_Practice;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Basics {
+	
+	public static WebDriver driver;
+	
+	public static void WindowHandling()
+	{
+		String win1=driver.getWindowHandle();
+		
+		Set<String> allwin=driver.getWindowHandles();
+		System.out.println(allwin.size());
+		
+		Iterator<String> it=allwin.iterator();
+		
+		 while (it.hasNext()) 
+		{
+		String win2=it.next();
+		driver.switchTo().window(win1);
+		System.out.println("switching window is successful");
+		}
+	}
+
+	public static void main(String[] args) {
+	
+		driver=WebDriverManager.chromedriver().create();
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--remote-allow-origins=*");
+//		WebDriver driver=new ChromeDriver(options);
+
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		driver.get("https://artoftesting.com/samplesiteforselenium");
+
+		
+	}
+
+}

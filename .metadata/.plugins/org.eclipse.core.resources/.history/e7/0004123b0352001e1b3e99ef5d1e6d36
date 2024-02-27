@@ -1,0 +1,66 @@
+package exercise_2GivenByGurusir;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class QustionNo26 {
+
+	public static void main(String[] args) {
+		//		26.	String s1 = "abababcde"
+		//				if the above string contains duplicates characters return true else return false
+		//				Write 3 approaches and each time reduce the number of iterations
+
+		String s1 = "cde";
+		System.out.println(containsduplicates1(s1));
+		System.out.println(containsduplicates2(s1));
+		System.out.println(containsduplicates3(s1));
+	}
+
+	public static boolean containsduplicates1(String str) {
+
+		for(int i=0;i<str.length();i++) {
+			int a= str.indexOf(str.charAt(i));
+			int b=str.lastIndexOf(str.charAt(i));
+			if(a!=b) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static boolean containsduplicates2(String str) {
+
+		Set<Character> set=new HashSet<Character>();
+		for(int i=0;i<str.length();i++)
+		{
+			if(!set.add(str.charAt(i)))
+			{
+				return true;
+			}
+		}	
+		return false;
+	}
+
+	public static boolean containsduplicates3(String str) {
+
+		Map<Character,Integer> map=new HashMap<Character,Integer>();
+		for(int i=0;i<str.length();i++)
+		{
+			map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0)+1);
+			
+			for(Entry<Character, Integer> entry:map.entrySet())
+			{
+				
+			if(map.containsKey(entry.getKey()))
+			{
+				System.out.println(entry.getKey());
+				return true;
+			}
+			}
+		}	
+		return false;
+	}
+}

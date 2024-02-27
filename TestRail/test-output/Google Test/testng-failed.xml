@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Google Test]" guice-stage="DEVELOPMENT" verbose="4">
+  <test thread-count="2" parallel="tests" name="FACEBOOK Test(failed)" verbose="4">
+    <parameter name="url" value="https://www.facebook.com/"/>
+    <classes>
+      <class name="Tests.FacebookTest">
+        <methods>
+          <include name="addResultsToTestRail"/>
+          <include name="FrgotpwdTest"/>
+          <include name="TextVerify"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Tests.FacebookTest -->
+    </classes>
+  </test> <!-- FACEBOOK Test(failed) -->
+  <test thread-count="2" parallel="tests" name="Testrail(failed)" verbose="4">
+    <parameter name="url" value="https://www.google.com/"/>
+    <classes>
+      <class name="Tests.GoogleTest">
+        <methods>
+          <include name="addResultsToTestRail"/>
+          <include name="GoogleLogoTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Tests.GoogleTest -->
+    </classes>
+  </test> <!-- Testrail(failed) -->
+</suite> <!-- Failed suite [Google Test] -->

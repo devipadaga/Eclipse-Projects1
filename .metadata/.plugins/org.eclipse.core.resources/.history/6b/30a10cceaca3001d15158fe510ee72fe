@@ -1,0 +1,17 @@
+package aSSIGNMENTS;
+
+import java.util.*;
+
+public class Jayeshassign {
+
+	public static void main(String[] args) {
+
+		String str="My name is Jayesh and I am working as an automation engineer";
+		
+		List<String> myList = new ArrayList<String>(Arrays.asList(str.split(" ")));
+
+		System.out.println(myList);
+
+	}
+
+}

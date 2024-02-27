@@ -1,0 +1,17 @@
+package api.utilities;
+
+import org.testng.annotations.DataProvider;
+
+import DDT.XLUtils;
+
+public class DataProviders {
+	
+	@DataProvider(nam="Data")
+	public String[][] getAllData()
+	{
+		String path=System.getProperty("user.dir")+"//petstore.xlsx";
+		XLUtils
+		return apidata;
+	}
+
+}

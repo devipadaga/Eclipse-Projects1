@@ -1,0 +1,10 @@
+package interview_Ques_shared;
+
+public class duplicateElement_and_its_frequency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

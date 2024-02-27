@@ -1,0 +1,71 @@
+package JavaScriptExecutor;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SelectDateByJS {
+	
+	public static WebDriver driver;
+	static JavascriptExecutor js=(JavascriptExecutor)driver;
+
+	public static void main(String[] args) throws AWTException {
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver(options);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+//		driver.get("https://www.spicejet.com/");
+		driver.get("https://www.makemytrip.com/");
+		
+
+//		Robot robot = new Robot();
+//		robot.keyPress(KeyEvent.VK_ESCAPE);
+//		robot.keyRelease(KeyEvent.VK_ESCAPE);
+		
+		
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ENTER).build().perform();
+		
+		WebElement ele=driver.findElement(By.xpath("//input[@class='fsw_inputField font20' and @id='departure']"));
+		//div[@class='fsw_inputBox dates inactiveWidget ']
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='fsw_inputField font20' and @id='departure']"))).click();
+//		js.executeScript("arguments[0].click()", ele);
+//		ele.click();
+//		WebElement dateEle=driver.findElement(By.xpath("(//*[local-name()='svg' and @height='16'])[1]"));
+//		dateEle.click();
+		String dateVal="Tuesday, 19 Dec 2023";
+		
+		selectDate(driver, ele, dateVal);
+		System.out.println("done");
+		
+		//driver.quit();
+
+	}
+	
+	public static void selectDate(WebDriver driver,WebElement element,String dateVal)
+	{
+		
+		js.executeScript("arguments[0].setAttribute('value','"+dateVal+"');", element);
+	}
+
+}

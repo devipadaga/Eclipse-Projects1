@@ -1,0 +1,62 @@
+package karTasks;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Stringg {
+	
+	static void rev()
+	{
+		String s="Karthi234rth351k45c",rev="",temp="",temp2="";
+		
+		ArrayList<Integer> list1=new ArrayList<Integer>();
+		ArrayList<String> list2=new ArrayList<String>();
+		
+		for(int i=0;i<s.length();i++)
+		{
+			if(Character.isLetter(s.charAt(i)))
+			{
+				if(i<s.length()-1 && Character.isDigit(s.charAt(i+1)))
+				{
+					temp2+=s.charAt(i);
+				}
+				
+				else
+				{
+					temp+=s.charAt(i);
+				}
+			}
+		}
+		System.out.println(temp);
+		
+	}
+
+	public static void main(String[] args) {
+
+/*		String s="Karthi234rth351k45c",temp="";
+		int sum=0;
+
+		for(int i=0;i<s.length();i++)
+		{
+			if(Character.isDigit(s.charAt(i)))
+			{
+				if (Character.isDigit(s.charAt(i+1))) 
+				{
+					temp += s.charAt(i);
+				}
+
+				else 
+				{
+					temp += s.charAt(i);
+					sum += Integer.parseInt(temp);
+					temp = "";
+				}					 						 
+			} 			
+		}
+		System.out.println(sum);
+		
+				*/
+		
+		rev();
+	}
+}

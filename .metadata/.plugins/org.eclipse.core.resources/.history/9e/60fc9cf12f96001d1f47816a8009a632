@@ -1,0 +1,24 @@
+package assssihnment;
+
+public class StringNum_Total {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String s="15 aug 1947";
+		int sum=0;
+		
+		for(int i=0;i<s.length();i++)
+		{
+			if(Character.isDigit(s.charAt(i)))
+			{
+				char digit=s.charAt(i);
+				sum+=digit;
+				System.out.print(digit);
+			}
+		}
+
+	}
+
+}

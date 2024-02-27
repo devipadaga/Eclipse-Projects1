@@ -1,0 +1,77 @@
+package practice_demo;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class AddProduct {
+
+	public static void main(String[] args) {
+
+		WebDriverManager.chromedriver().setup();		
+		WebDriver driver=new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get("https://www.amazon.in/");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("5 feet pink TeddyBear");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+
+		List<WebElement> product=driver.findElements(By.xpath("//div[@data-component-type='s-search-result']"));
+		System.out.println(product.size());
+
+		List<WebElement> productName=driver.findElements(By.xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']"));
+
+
+		//TOYKING 5 Feet Jumbo Cute Teddy Bear ( Pink)
+		String name="Webby 3 Feet Huggable Teddy Bear with Neck Bow (Pink)";
+
+		for(int i=0;i<productName.size();i++)
+		{
+			System.out.println(productName.get(i).getText());
+			if(productName.get(i).getText().equals(name))
+			{
+				productName.get(i).click();
+				String tab1 = driver.getWindowHandle();
+
+				Set<String> windows=driver.getWindowHandles();
+				System.out.println(windows.size());
+
+				Iterator<String> iterator = windows.iterator();
+				while (iterator.hasNext()) {
+					String tab2 = iterator.next();
+					if(!tab1.equalsIgnoreCase(tab2))
+					{
+						driver.switchTo().window(tab2);
+						WebElement amt_in_Amazon=driver.findElement(By.xpath("//span[@class='a-price aok-align-center reinventPricePriceToPayMargin priceToPay']"));
+						System.out.println(amt_in_Amazon.getText());
+					}
+
+				}
+				
+				driver.switchTo().newWindow(WindowType.TAB);
+				driver.get("https://www.flipkart.com/");
+				driver.findElement(By.xpath("//input[@type='text']")).sendKeys("5 feet pink TeddyBear");
+				driver.findElement(By.xpath("//button[@type='submit']")).click();
+				driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
+				
+				
+
+
+
+			}
+
+		}
+
+
+
+
+	}
+}

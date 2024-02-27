@@ -1,0 +1,18 @@
+package interview_Ques_shared;
+
+import java.util.HashMap;
+
+public class array_to_hashmap {
+
+	public static void main(String[] args) {
+
+		String[] newData = {"C1-Once","C2-Two","C3-Three","C4"};
+		
+		HashMap<String,String> hm=new HashMap<String,String>();
+		
+		
+
+
+	}
+
+}

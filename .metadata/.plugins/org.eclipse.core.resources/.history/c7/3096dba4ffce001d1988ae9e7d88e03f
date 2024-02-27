@@ -1,0 +1,10 @@
+package karTasks;
+
+public class Common_Prefix_inStringArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

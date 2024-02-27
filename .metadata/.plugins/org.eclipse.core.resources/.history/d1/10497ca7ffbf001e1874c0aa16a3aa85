@@ -1,0 +1,77 @@
+package dailyTasks;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class Date_30_01_2024 {
+
+	public static void main(String[] args)
+	{
+		//System.out.println(GreatestNum(10, 20, 5));
+
+		//		String[] arr = {"srikar", "jayesh","kavita", "Hyderabad", "Tirumala", "Banglore","Hyderabad", "debrati","ankita","jayesh", "pune","GRhombus Technologies","Noida","kavita","Telangana", "Delhi","Karnataka","Maharashtra", "India"};
+		//
+		//		CorrecttheOrder(arr);
+
+		String s="GRhombus Technologies";
+		revStringUsingStringBuilder(s);
+	}
+
+
+	public static int GreatestNum(int a,int b,int c)
+	{
+		int temp=(a>b?a:b);
+		int largest=(temp>c?temp:c);
+
+		return largest;
+
+
+	}
+
+	public static void CorrecttheOrder(String[] arr)
+	{
+		//2. String[] arr = {“srikar”, “jayesh”,”kavita”, “Hyderabad”, “Tirumala”, “Banglore”,”Hyderabad”, “debrati”,”ankita”,”jayesh”, “pune”,”GRhombus Technologies”,”Noida”,”kavita”,”Telangana”, “Delhi”,”Karnataka”,”Maharashtra”, “India”}
+
+		//		Map<String[],Integer> hm=new HashMap<String[],Integer>();
+		//		
+		//		hm.put(arr, hm.put(hm.get(hm), null))
+		//		
+
+		Map<String,Integer> map=new HashMap<>();
+		for (int i = 0; i < arr.length; i++) {	
+			map.put(arr[i], map.getOrDefault(arr[i], 0)+1);
+		}
+
+		for(Entry<String,Integer> entry:map.entrySet())
+		{
+			if(entry.getKey().length()>=6 && entry.getValue()==1) {
+				System.out.println(entry.getKey()+"-"+entry.getValue());
+			}
+
+			//			else if(entry.getKey().length()>7 && entry.getValue()>1) {
+			//				System.out.println(entry.getKey()+"-"+entry.getValue());
+			//			}
+
+
+		}
+
+	}
+
+	// dont use methods in string builder
+	public static void revStringUsingStringBuilder(String s)
+	{
+		StringBuilder sb=new StringBuilder(s);
+		for (int i = 0; i < sb.length(); i++) {
+			
+			if(sb.charAt(i)==' ')
+			{
+				sb.append(sb.substring(0, i));
+			}
+			
+			System.out.println(sb.toString());
+		}
+
+		}
+	
+}
