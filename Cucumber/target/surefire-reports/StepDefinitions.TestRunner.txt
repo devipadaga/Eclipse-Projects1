@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 27.64 sec <<< FAILURE!
+Check login is successful with valid credentials(Test login functionality)  Time elapsed: 8.546 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.LoginPage.ElementCheck()" because "this.login" is null
+	at StepDefinitions.POM_Mercurytours.user_is_on_homepage(POM_Mercurytours.java:54)
+	at ✽.user is on homepage(file:///C:/Users/SPURGE/eclipse-workspace/Cucumber/src/test/resources/Features/OrangeHRMlogin.feature:7)
+

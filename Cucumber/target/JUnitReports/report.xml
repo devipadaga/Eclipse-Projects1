@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.432">
+    <testcase classname="Title of your feature" name="Title of your scenario" time="0.169">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I want to write a step with precondition..............................undefined
+And some other precondition.................................................skipped
+When I complete action......................................................skipped
+And some other action.......................................................skipped
+And yet another action......................................................skipped
+Then I validate the outcomes................................................skipped
+And check more outcomes.....................................................skipped
+]]></failure>
+    </testcase>
+</testsuite>

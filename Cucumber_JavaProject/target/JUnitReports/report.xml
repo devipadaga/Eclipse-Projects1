@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5,797.195">
+    <testcase classname="To book Flight in cleartrip" name="Book one way flight" time="5,796.945">
+        <failure message="disconnected: Unable to receive message from renderer&#10;  (Session info: chrome=100.0.4896.88)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-IG45S0Q', ip: '192.168.0.106', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b1fa42a87c06bf0a12477872f333fffa, clickElement {id=706a9399-3a3e-43f6-be71-20f8568910d6}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\SPURGE\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57813/devtoo..., se:cdpVersion: 100.0.4896.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (b1fa42a87c06bf0a12477872f333fffa)] -&gt; xpath: //div[@class='flex-1 ta-right']//*[name()='svg']]&#10;Session ID: b1fa42a87c06bf0a12477872f333fffa" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user browse to cleartrip..............................................passed
+And user is on search results...............................................passed
+And Select country as India.................................................passed
+When user clicks one way radio button.......................................passed
+And Selects from station and To Station.....................................passed
+And select Daparture Date...................................................failed
+And Selects No of adults and children.......................................skipped
+And clicks on Search flights................................................skipped
+Then user gets list of Available Flights....................................skipped
+And user choose the appropriate airline within budget 5000..................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer
+  (Session info: chrome=100.0.4896.88)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-IG45S0Q', ip: '192.168.0.106', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b1fa42a87c06bf0a12477872f333fffa, clickElement {id=706a9399-3a3e-43f6-be71-20f8568910d6}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\SPURGE\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57813/devtoo..., se:cdpVersion: 100.0.4896.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (b1fa42a87c06bf0a12477872f333fffa)] -> xpath: //div[@class='flex-1 ta-right']//*[name()='svg']]
+Session ID: b1fa42a87c06bf0a12477872f333fffa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at ClearTrip.ClearTrip_Steps.select_daparture_date(ClearTrip_Steps.java:153)
+	at ✽.select Daparture Date(file:///C:/Users/SPURGE/eclipse-workspace/Cucumber_JavaProject/src/test/resources/Feature_ClearTrip/cleartrip.feature:9)
+]]></failure>
+    </testcase>
+</testsuite>

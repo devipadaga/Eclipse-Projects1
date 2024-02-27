@@ -1,0 +1,36 @@
+2022-06-09 17:52:46,996  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:52:49,560  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:52:54,985  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:52:56,371  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:53:01,979  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:53:03,410  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:53:06,790  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:53:08,336  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:53:14,477  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:53:15,877  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:53:19,899  INFO [main] BaseClass:122 - Closing the browser
+2022-06-09 17:53:20,211  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:53:21,489  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:53:41,849  INFO [main] BaseClass:122 - Closing the browser
+2022-06-09 17:53:42,164  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:53:43,543  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:53:46,828  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:53:48,103  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:54:15,683  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:54:16,984  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:54:20,938  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:54:22,370  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:54:32,568  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:54:34,129  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:54:36,575  INFO [main] BaseClass:81 - launching the browser
+2022-06-09 17:54:37,906  INFO [main] BaseClass:113 - launching the URL
+2022-06-09 17:54:43,837 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-06-09 17:54:43,840 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-06-09 17:54:43,840 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-06-09 17:54:43,840 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-06-09 17:54:43,840 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SPURGE/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-06-09 17:54:44,203 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2022-06-09 17:54:44,203 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2022-06-09 17:54:44,204 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2022-06-09 17:54:44,204 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2022-06-09 17:54:44,205 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SPURGE/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
